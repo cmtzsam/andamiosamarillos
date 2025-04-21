@@ -303,9 +303,33 @@ li{
 // Casos de exito
 .casosExito{
   background-color: $red;
+  background-image: url('../images/bg-casos-de-exito.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 50px 0;
+  position: relative;
   @include minDesktopSmall{
+    padding: 200px 0;
+  }
+  @include desktopSmallToBig{
     padding: 100px 0;
+  }
+
+  .container{
+    position: relative;
+    // &::before{
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   right: 0;
+    //   width: 375px;
+    //   height: 690px;
+    //   background-image: url('../images/character-casos.png');
+    //   background-position: center center;
+    //   background-repeat: no-repeat;
+    //   background-size: 100%v;
+    // }
   }
 
   &--intro,
@@ -448,8 +472,275 @@ li{
       padding-top: 20px;
     }
   }
+}
 
-    
+
+
+
+
+
+
+.proyectosBlock{
+  background-color: gray;
+  position: relative;
+
+  &--title{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 30px;
+    h2{
+      color: $yellow;
+      @include maxDesktopSize{
+        text-align: center;
+      }
+    }
+  }
+
+  &--carousel{
+    position: relative;
+    z-index: 1;
+    &-nav{
+      position: absolute;
+      width: 98%;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: white;
+      &::after{
+        font-size: 60px;
+        @include phabletToDesktopSmall{
+          font-size: 30px;
+        }
+        @include maxMobile{
+          font-size: 20px;
+        }
+      }
+    }
+  
+    .swiper-pagination {
+      position: relative;
+      margin: 0 10px 0;
+      padding: 0px 0 0;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+      bottom: 0;
+      top: 0;
+      left: 0 !important;
+      transform: none !important;  
+      .swiper-pagination-bullet {
+        width: 40px;
+        height: 40px;
+        margin: 0 6px;
+        background: transparent;
+        border: 2px solid white;
+        opacity: 1;
+        transition: all 0.3s ease;
+        background-image: url(https://placehold.co/40);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+  
+        &-active {
+          background-color: white;
+          width: 50px;
+          height: 50px;
+          border-color: $yellow;
+        }
+      }
+    }
+
+  }
+
+  &--item{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+    &-bg{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      @include desktopSmallToBig{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      @include phabletToDesktopSmall{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      @include maxPhablet{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      @include maxMobile{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      img{
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        @include desktopSmallToBig{
+          min-width: 100%;
+          height: 100%;
+        }
+        @include maxDesktopSmall{
+          max-width: unset;
+          height: 100%;
+          width: auto;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+    &-inf{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      @include desktopSmallToBig{
+        position: relative;
+        padding: 250px 50px 100px;
+      }
+      @include phabletToDesktopSmall{
+        position: relative;
+        padding: 160px 50px 50px;
+      }
+      @include maxPhablet{
+        position: relative;
+        padding: 160px 50px 0;
+      }      
+      @include maxMobile{
+        position: relative;
+        padding: 140px 50px 0;
+      }
+      @include maxMobilePortrait{
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      h3{
+        color: $yellow;
+        font-size: 60px;
+        letter-spacing: 1px;
+        font-weight: 300;
+        margin: 0;
+        @include desktopSmallToBig{
+          font-size: 40px;
+        }
+        @include phabletToDesktopSmall{
+          font-size: 32px;
+        }
+        @include maxPhablet{
+          font-size: 35px;
+        }
+        @include maxMobile{
+          font-size: 30px;
+        }
+      }
+      p{
+        color: white;
+        font-size: 17px;
+        line-height: 1.75;
+        margin: 20px 0 0;
+        @include desktopSmallToBig{
+          margin-top: 15px;
+          font-size: 16px;
+        }
+        @include phabletToDesktopSmall{
+          margin-top: 15px;
+          font-size: 15px;
+        }
+        @include maxPhablet{
+          margin-top: 10px;
+          font-size: 16px;
+        }
+        @include maxMobile{
+          margin-top: 10px;
+          font-size: 15px;
+        }
+        @include maxMobilePortrait{
+          font-size: 13px;
+          line-height: 1.5;
+        }
+      }
+
+
+      .vid{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        margin: 0 auto;
+        cursor: pointer;
+        @include maxDesktopSmall{
+          padding: 50px 0 30px;
+        }
+        span{
+          color: white;
+          text-align: center;
+          display: block;
+          margin-top: 30px;
+        }
+        .playBtn {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 60px;
+          height: 60px;
+          background-color: #fff;
+          border-radius: 50%;
+          &:before,
+          &:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: solid 3px #fff;
+            border-radius: 50%;
+          }
+          &:before {
+            animation: ripple 2s linear infinite;
+          }
+          &:after {
+            animation: ripple 2s 1s linear infinite;
+          }
+
+          i{
+            font-size: 30px;
+            color: $red;
+          }
+
+        }        
+      }
+
+    }
+  }
+
 }
 
 
@@ -463,5 +754,211 @@ li{
 
 
 
+
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+
+
+.heroHomePage{
+  background-color: #fc2213;
+  @include tabletPortraitToDesktop{
+    padding: 15px 0;
+  }
+  @include phabletToTablet{
+    padding: 15px 0;
+  }
+  @include maxPhablet{
+    padding: 30px 0 15px;
+  }
+  &--item{
+    height: 100vh;
+    max-height: 790px;
+    @include tabletPortraitToDesktop{
+      height: auto;
+      max-height: unset;
+    }
+    @include phabletToTablet{
+      height: auto;
+      max-height: unset;
+    }
+    @include maxPhablet{
+      height: auto;
+      max-height: unset;
+    }
+  }
+  &--txt{
+    position: relative;
+    @include maxPhablet{
+      text-align: center;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      right: -30%;
+      width: 240px;
+      height: 240px;
+      background-image: url(../images/laptop.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      top: 0;
+      z-index: 5;
+      @include tabletPortraitToDesktop{
+        width: 200px;
+        height: 200px;
+        right: -30%;
+        top: 25%;
+      }
+      @include phabletToTablet{
+        width: 190px;
+        height: 190px;
+        right: -50%;
+        bottom: 0;
+        top: unset;        
+      }
+      @include maxPhablet{
+        display: none;
+      }
+    }
+    h2{
+      color: white;
+      font-size: 50px;
+      line-height: 1.25;
+      span{
+        color: $yellow;
+        font-family: inherit;
+        display: block;
+        font-size: 2em;
+        @include tabletPortraitToDesktop{
+          font-size: 1.25em;
+        }
+        @include phabletToTablet{
+          font-size: 1.25em;
+        }
+        @include maxMobile{
+          font-size: 1.5em;
+          margin-top: 10px;
+        }
+      }
+      @include tabletPortraitToDesktop{
+        font-size: 40px;
+      }      
+      @include phabletToTablet{
+        font-size: 35px;
+      }      
+      @include maxPhablet{
+        font-size: 40px;
+      }      
+      @include maxMobile{
+        font-size: 36px;
+      }      
+      @include maxMobilePortrait{
+        font-size: 32px;
+      }      
+    }
+    a.btn{
+      @include flexCenter;
+      width: 100%;
+      max-width: 240px;
+      margin: 80px auto 0;
+      height: 55px;
+      line-height: 1;
+      border-radius: 30px;
+      color: $red;
+      background-color: $yellow;
+      border: 3px solid white;
+      text-align: center;
+      font-size: 25px;
+      @include tabletPortraitToDesktop{
+        margin: 60px 0 0;
+      }
+      @include phabletToTablet{
+        margin: 60px 0 0;
+      }
+      @include maxPhablet{
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &--img{
+    background-image: url('../images/bgred.png');
+    background-position: center center;
+    background-size: 125%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    img{
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      transform: scale(.9);
+      @include maxMobile{
+        max-width: 200px;
+      }
+    }
+  }
+
+}
+
+
+.headerPrincipal{
+
+  &--nav{
+    a{
+      @include minDesktop1280{
+        font-size: 20px;
+      }
+    }
+  }
+
+  &--mobileNav{
+    &.collapse{
+      padding-top: 20px;
+    }
+  }
+
+  &--searchBtn{
+    @include maxTabletPortrait{
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      border-radius: 5px!important;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid white;
+    }
+  }
+
+  .navbar-toggler-icon{
+
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    opacity: 1;
+    font-size: 20px;
+
+  }
+
+
+}
 
 

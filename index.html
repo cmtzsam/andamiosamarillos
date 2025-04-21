@@ -24,10 +24,236 @@
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-  </header>
+  <!-- Header -->
+<!-- Header -->
+<header class="headerPrincipal py-3" style="background-color: #f6aa1b;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="#" class="headerPrincipal--logo d-flex align-items-center text-white fw-bold text-decoration-none">
+      <img src="./assets/images/logo.png" alt="Andamios Amarillos" width="165" height="110">
+    </a>
+
+    <!-- Navbar Desktop -->
+    <nav class="headerPrincipal--nav d-none d-lg-flex gap-4">
+      <a href="#" class="text-white">Inicio</a>
+      <a href="#" class="text-white">¿Quiénes somos?</a>
+      <a href="#" class="text-white">Productos</a>
+      <a href="#" class="text-white">Sucursales</a>
+      <a href="#" class="text-white">Blog</a>
+      <a href="#" class="text-white">Bolsa de trabajo</a>
+    </nav>
+
+    <!-- Search & Toggle Buttons -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Search Button -->
+      <button class="headerPrincipal--searchBtn btn btn-outline-light rounded-pill px-3 py-1" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <i class="bi bi-search"></i>
+      </button>
+
+      <!-- Toggle for Mobile -->
+      <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon">
+          <div class="bi bi-list"></div>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="collapse headerPrincipal--mobileNav d-lg-none " id="mobileMenu">
+    <div class="container py-3">
+      <a href="#" class="d-block text-white fw-bold mb-2">Inicio</a>
+      <a href="#" class="d-block text-white fw-bold mb-2">¿Quiénes somos?</a>
+      <a href="#" class="d-block text-white fw-bold mb-2">Productos</a>
+      <a href="#" class="d-block text-white fw-bold mb-2">Sucursales</a>
+      <a href="#" class="d-block text-white fw-bold mb-2">Blog</a>
+      <a href="#" class="d-block text-white fw-bold">Bolsa de trabajo</a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Modal de búsqueda -->
+  <div class="modal fade headerPrincipal--searchModal" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-dark text-white d-flex justify-content-center align-items-center">
+        <div class="modal-body w-100 d-flex justify-content-center">
+          <form class="headerPrincipal--form w-75 w-md-50 position-relative">
+            <input type="search" class="form-control bg-transparent border-light text-white px-4 py-2"
+              placeholder="Búsqueda">
+            <button type="submit" class="btn position-absolute end-0 top-0 bottom-0 d-flex align-items-center px-3">
+              <!-- <i class="bi bi-search text-white"></i> -->
+            </button>
+          </form>
+        </div>
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-4"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
   <main>
+    <div class="heroHomePage">
+      <div class="container">
+
+        <div class="heroHomePage--item d-flex align-items-center">
+          <div class="row ">
+            <div class="col col-12 col-md-6 col-lg-6 d-flex align-items-center">
+              <div class="heroHomePage--txt">
+                <h2>
+                  COTIZA, CONTRATA, PAGA Y FACTURA
+                  <span>EN LÍNEA</span>
+                </h2>
+                <a href="#!" class="btn">¡Cotiza ahora!</a>
+              </div>
+            </div>
+
+            <div class="col col-12 col-md-6 col-lg-6">
+              <div class="heroHomePage--img">
+                <img src="/assets/images/char-hero.png" alt="Andamios  Amarillos" class="charimg">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- proyectos -->
+    <div class="proyectosBlock" id="proyectosBlock">
+
+      <div class="proyectosBlock--title">
+        <div class="container">
+          <h2>Proyectos</h2>
+        </div>
+      </div>
+
+      <div class="proyectosBlock--carousel">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="proyectosBlock--item">
+                <div class="proyectosBlock--item-bg">
+                  <img src="assets/images/bg-fondo-proyectos.jpg" alt="Proyectos">
+                </div>
+                <div class="proyectosBlock--item-inf">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col col-12 col-md-9 col-lg-6">
+                        <div class="txt ">
+                          <h3>Lorem impsum</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                            viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+                            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                            commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+                            lacus vel facilisis. </p>
+                        </div>
+                      </div>
+                      <div class="col col-12 col-md-3 col-lg-6 d-flex align-items-center justify-content-center">
+                        <div class="vid">
+                          <div class="playBtn">
+                            <i class="bi bi-play-fill"></i>
+                          </div>
+                          <span>Ver Video</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="proyectosBlock--item">
+                <div class="proyectosBlock--item-bg">
+                  <img src="assets/images/bg-fondo-proyectos.jpg" alt="Proyectos">
+                </div>
+                <div class="proyectosBlock--item-inf">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col col-12 col-md-9 col-lg-6">
+                        <div class="txt ">
+                          <h3>Lorem impsum</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                            viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+                            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                            commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+                            lacus vel facilisis. </p>
+                        </div>
+                      </div>
+                      <div class="col col-12 col-md-3 col-lg-6 d-flex align-items-center justify-content-center">
+                        <div class="vid">
+                          <div class="playBtn">
+                            <i class="bi bi-play-fill"></i>
+                          </div>
+                          <span>Ver Video</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="proyectosBlock--item">
+                <div class="proyectosBlock--item-bg">
+                  <img src="assets/images/bg-fondo-proyectos.jpg" alt="Proyectos">
+                </div>
+                <div class="proyectosBlock--item-inf">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col col-12 col-md-9 col-lg-6">
+                        <div class="txt ">
+                          <h3>Lorem impsum</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                            viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+                            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                            commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+                            lacus vel facilisis. </p>
+                        </div>
+                      </div>
+                      <div class="col col-12 col-md-3 col-lg-6 d-flex align-items-center justify-content-center">
+                        <div class="vid">
+                          <div class="playBtn">
+                            <i class="bi bi-play-fill"></i>
+                          </div>
+                          <span>Ver Video</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proyectosBlock--carousel-nav">
+            <div class="navbtn swiper-button-prev"></div>
+            <div class="navbtn swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- proyectos -->
 
 
     <!-- casos de exito -->
@@ -91,9 +317,6 @@
       </div>
     </div>
     <!-- casos de exito -->
-
-
-
 
 
     <!-- contact block -->
@@ -290,17 +513,29 @@
   <script type="module">
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-    const swiper = new Swiper('.swiper', {
+    const swiperCasos = new Swiper('.casosExito .swiper', {
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.casosExito .swiper-button-next',
+        prevEl: '.casosExito .swiper-button-prev'
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.casosExito .swiper-pagination',
         clickable: true,
         dynamicBullets: true
       },
-    })
+    });
+    const swiperProyectos = new Swiper('.proyectosBlock .swiper', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.proyectosBlock .swiper-button-next',
+        prevEl: '.proyectosBlock .swiper-button-prev'
+      },
+      pagination: {
+        el: '.proyectosBlock .swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+      },
+    });
   </script>
 
 </body>
