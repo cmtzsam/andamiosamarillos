@@ -1,0 +1,351 @@
+.mapa
+    padding: 30px 0 50px
+    .main-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 30px 0 90px
+        padding: 0 20px
+        h2
+            font-weight: bold
+            font-size: 30px
+            color: #26d07c
+            text-align: center
+            margin: 0 0 30px
+        .map
+            margin: 0 auto
+            width: 100%
+            max-width: 500px
+            position: relative
+            svg
+                position: relative
+                fill: transparent
+                max-width: 100%
+                path
+                    position: relative
+                    transition: all .1s ease-in-out
+                    stroke: #acacac
+                    stroke-width: 3px
+                    &:hover
+                        fill: #acacac
+                .point
+                    display: none
+                    fill: #da291c
+                    stroke-width: 11px
+                    stroke: rgba(218, 41, 28, 0.431)
+                    r: 4px
+                    z-index: -1
+                    &.point-tijuana
+                        cy: 50px
+                        cx: 97px
+                    &.point-sonora
+                        cy: 112px
+                        cx: 221px
+                    &.point-sonora2
+                        cy: 174px
+                        cx: 283px
+                    &.point-chihuahua
+                        cy: 144px
+                        cx: 390px
+                    &.point-chihuahua2
+                        cy: 98px
+                        cx: 353px
+                    &.point-coahuila
+                        display: block
+                        cy: 267px
+                        cx: 483px
+                    &.point-coahuila2
+                        display: block
+                        cy: 282px
+                        cx: 544px
+                    &.point-nuevoleon
+                        display: block
+                        cy: 262px
+                        cx: 569px
+                    &.point-tamaulipas
+                        cy: 205px
+                        cx: 584px
+                    &.point-tamaulipas2
+                        cy: 251px
+                        cx: 621px
+                    &.point-sinaloa
+                        cy: 252px
+                        cx: 311px
+                    &.point-sinaloa2
+                        cy: 296px
+                        cx: 367px
+                    &.point-sinaloa3
+                        cy: 339px
+                        cx: 394px
+                    &.point-durango
+                        cy: 310px
+                        cx: 428px
+                    &.point-zacatecas
+                        cy: 349px
+                        cx: 499px
+                    &.point-sanluis
+                        display: block
+                        cy: 370px
+                        cx: 544px
+                    &.point-jalisco
+                        display: block
+                        cy: 414px
+                        cx: 471px
+                    &.point-guanajuato
+                        display: block
+                        cy: 410px
+                        cx: 524px
+                    &.point-queretaro
+                        display: block
+                        cy: 418px
+                        cx: 564px
+                    &.point-morelos
+                        display: block
+                        cy: 473px
+                        cx: 598px
+                        r: 1.5px
+                        stroke-width: 6px
+                    &.point-cdmx
+                        display: block
+                        cy: 459px
+                        cx: 598px
+                        r: 1.5px
+                        stroke-width: 6px
+                    &.point-puebla
+                        display: block
+                        cy: 470px
+                        cx: 625px
+                    &.point-veracruz
+                        cy: 468px
+                        cx: 678px
+                    &.point-tabasco
+                        cy: 497px
+                        cx: 779px
+                    &.point-quintanaroo
+                        cy: 400px
+                        cx: 948px
+                    &.point-yucatan
+                        cy: 407px
+                        cx: 869px
+
+            .info-boxes
+                .info-box
+                    display: none
+                    cursor: pointer
+                    position: absolute
+                    background-color: transparent
+                    h3
+                        font-size: 12px
+                        color: #da291c
+                        margin: 0
+                        font-weight: normal
+                        span
+                            color: #f6aa1b
+                    &::before
+                        content: ''
+                        background-color: #da291c
+                        width: 1px
+                        position: absolute
+                        left: -7px
+                        top: 4px
+                    &::after
+                        display: none
+                        content: ''
+                        width: 10px
+                        height: 10px
+                        position: absolute
+                        left: -7px
+                        border-radius: 50%
+                        top: 4px
+                        background-color: #da291c
+                    &.info-MXBCN
+                        left: 55px
+                        top: -19px
+                        &::before
+                            height: 40px
+                    &.info-MXSON
+                        left: 117px
+                        top: -8px
+                        &::before
+                            height: 60px
+                        &#info-MXSON2
+                            left: 148px
+                            top: 23px
+                    &.info-MXCHH
+                        left: 183px
+                        top: -15px
+                        &::before
+                            height: 60px
+                        &#info-MXCHH2
+                            left: 201px
+                            top: 8px
+                    &.info-MXCOA
+                        display: block
+                        left: 248px
+                        top: 9px
+                        &::before
+                            height: 120px
+                        &#info-MXCOA2
+                            left: 278px
+                            top: 37px
+                            &::before
+                                height: 100px
+                    &.info-MXNLE
+                        display: block
+                        left: 366px
+                        top: 111px
+                        &::before
+                            height: 1px
+                            width: 156px
+                            left: -82px
+                            top: 20px
+                    &.info-MXTAM
+                        left: 298px
+                        top: 69px
+                        &::before
+                            height: 30px
+                        &#info-MXTAM2
+                            left: 317px
+                            top: 91px
+                            &::before
+                                height: 30px
+                    &.info-MXSIN
+                        left: 90px
+                        top: 194px
+                        &::before
+                            height: 80px
+                            left: 65px
+                            top: -68px
+                        &#info-MXSIN2
+                            left: 134px
+                            top: 216px
+                            &::before
+                                height: 80px
+                                left: 49px
+                                top: -68px
+                        &#info-MXSIN3
+                            left: 144px
+                            top: 238px
+                            &::before
+                                height: 80px
+                                left: 53px
+                                top: -68px
+                    &.info-MXDUR
+                        left: 160px
+                        top: 243px
+                        h3
+                            &::after
+                                display: none
+                                content: ''
+                                background-color: white
+                                width: 100%
+                                height: 1px
+                                position: absolute
+                                left: 0px
+                                bottom: 0px
+                        &::before
+                            height: 100px
+                            left: 53px
+                            top: -88px
+                    &.info-MXZAC
+                        left: 192px
+                        top: 283px
+                        &::before
+                            height: 120px
+                            left: 57px
+                            top: -108px
+                    &.info-MXJAL
+                        display: block
+                        left: 73px
+                        top: 187px
+                        &::before
+                            height: 1px
+                            width: 164px
+                            left: 0px
+                            top: 20px
+                    &.info-MXGUA
+                        display: block
+                        left: 230px
+                        top: 272px
+                        h3
+                            text-align: right
+                        &::before
+                            height: 82px
+                            left: 31px
+                            top: -68px
+                    &.info-MXQUE
+                        display: block
+                        left: 224px
+                        top: 292px
+                        h3
+                            text-align: right
+                        &::before
+                            height: 98px
+                            left: 58px
+                            top: -84px
+                    &.info-MXDIF
+                        display: block
+                        left: 364px
+                        top: 210px
+                        &::before
+                            height: 1px
+                            width: 114px
+                            left: -65px
+                            top: 19px
+                    &.info-MXSLP
+                        display: block
+                        left: 354px
+                        top: 164px
+                        &::before
+                            height: 1px
+                            width: 164px
+                            left: -82px
+                            top: 20px
+                    &.info-MXMOR
+                        display: block
+                        left: 234px
+                        top: 313px
+                        h3
+                            text-align: right
+                        &::before
+                            height: 94px
+                            left: 65px
+                            top: -78px
+                    &.info-MXPUE
+                        display: block
+                        left: 317px
+                        top: 300px
+                        h3
+                            text-align: right
+                        &::before
+                            height: 80px
+                            left: -5px
+                            top: -65px
+                    &.info-MXVER
+                        left: 345px
+                        top: 200px
+                        &::before
+                            height: 30px
+                    &.info-MXYUC
+                        left: 441px
+                        top: 169px
+                        &::before
+                            height: 30px
+                    &.info-MXTAB
+                        left: 320px
+                        top: 194px
+                        &::before
+                            height: 50px
+                            left: 69px
+                    &.info-MXROO
+                        left: 480px
+                        top: 165px
+                        &::before
+                            height: 30px
+
+@media (max-width: 999px)
+    .mapa
+        .main-block
+            .map
+                .info-boxes
+                    display: none !important
