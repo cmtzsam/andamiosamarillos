@@ -915,6 +915,18 @@ li{
 
 
 .headerPrincipal{
+  .lang{
+    a{
+      color: white;
+      &.active{
+        color: $red;
+        font-weight: bold;
+      }
+    }
+    span{
+      color: white;
+    }
+  }
 
   &--nav{
     a{
@@ -974,8 +986,8 @@ li{
   &::before{
     content: "";
     position: absolute;
-    top: 10%;
-    height: 80%;
+    top: 15%;
+    height: 70%;
     width: 100%;
     z-index: 1;
     background-color: rgba(0,0,0,0.5);
@@ -1086,7 +1098,7 @@ li{
       border-bottom: 60px solid transparent;
       border-left: 35px solid $red;
     }
-    &.activated2{
+    &.activated8,&.activated9,&.activated10,&.activated11,&.activated12,&.activated13,&.activated14{
       &::after{
         top: inherit;
         bottom: 170px;
@@ -1124,10 +1136,13 @@ li{
           }
           .imgProduct{
             max-width: 530px;
+            min-height: 600px;
             margin: 0 0 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             img{
               display: block;
-              width: 100%;
               max-width: 100%;
             }
           }
@@ -1158,7 +1173,41 @@ li{
       flex-wrap: wrap;
       align-items: center;
       .tabProduct{
+        position: relative;
+        width: 100%;
+        max-width: 100%;
         cursor: pointer;
+        .swiper{
+          .swiper-button-prev{
+            display: none;
+          }
+          .swiper-button-next{
+            display: none;
+          }
+        }
+        .swiper-pagination{
+          left: inherit;
+          right: -20px;
+          transform: translateY(-50%);
+          top: 60%;
+          bottom: inherit;
+          width: auto !important;
+          .swiper-pagination-bullet{
+            display: block;
+            left: inherit !important;
+            background-color: $red;
+            opacity: 1;
+            width: 8px;
+            height: 8px;
+            transform: scale(1);
+            margin: 7px 0;
+            transition: all .3s ease-in-out;
+            &.swiper-pagination-bullet-active{
+              height: 30px;
+              border-radius: 50px;
+            }
+          }
+        }
         h4{
           color: white;
           text-align: center;
@@ -1174,8 +1223,11 @@ li{
             justify-content: center;
             align-items: center;
             padding: 10px;
+            height: 160px;
             img{
               display: block;
+              max-height: 100%;
+              max-width: 100%;
             }
           }
           .textImgTabProduct{
@@ -1245,17 +1297,52 @@ li{
     .phonesRow{
       width: 100%;
       max-width: 1180px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto 20px;
+      .block-acordeon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 20px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        margin: 0 0 15px;
+        transition: all .3s ease-in-out;
+        position: absolute;
+        .btn-acordeon{
+          position: relative;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          text-transform: capitalize;
+          background-color: #ccc;
+          text-align: center;
+          color: $red;
+          height: 60px;
+          font-size: 18px;
+          cursor: pointer;
+          font-weight: bold;
+          margin-bottom: 20px;
+          i{
+            position: absolute;
+            top: 32%;
+            right: 20px;
+          }
+        }
+        &.active{
+          position: relative;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
       &:last-child{
         margin: 0 auto;
       }
       .phoneItem{
         width: 100%;
-        display: flex;
+        display: none;
         justify-content: space-between;
         align-items: center;
         max-width: 380px;
@@ -1270,6 +1357,7 @@ li{
         transition: all .3s ease-in-out;
         position: absolute;
         &.active{
+          display: flex;
           position: relative;
           opacity: 1;
           visibility: visible;
@@ -1307,14 +1395,14 @@ li{
   }
 }
 
-@include maxPhablet{
+@include maxTabletLandscape{
   .productosBlock{
     flex-wrap: wrap;
     .tabsProductsBlock{
       order: 1;
       width: 100%;
       max-width: 100%;
-      padding: 20px 20px 40px;
+      padding: 20px 20px 80px;
       .tabsProducts{
         max-width: 100%;
         justify-content: space-between;
@@ -1323,9 +1411,35 @@ li{
           h4{
             font-size: 18px;
           }
+          .swiper-pagination{
+            right: inherit;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            top: inherit;
+            .swiper-pagination-bullet{
+              margin: 0 2px;
+              left: 0 !important;
+              display: inline-block;
+              &.swiper-pagination-bullet-active{
+                height: 8px;
+                width: 30px;
+              }
+            }
+          }
           .contentImgTabProduct{
+            .imgTabProduct{
+              img{
+                max-width: 100%;
+              }
+            }
             .textImgTabProduct{
-              display: none;
+              p{
+                font-size: 11px;
+                span{
+                  font-size: 12px;
+                }
+              }
             }
           }
         }
@@ -1349,7 +1463,7 @@ li{
         right: inherit;
         top: -20px;
       }
-      &.activated2{
+      &.activated8,&.activated9,&.activated10,&.activated11,&.activated12,&.activated13,&.activated14{
         &::after{
           right: 18%;
           left: inherit;
@@ -1357,18 +1471,122 @@ li{
           top: -20px;
         }
       }
+      .contentProducts{
+        .titleProducts{
+          text-align: center;
+        }
+        .contentTabsProduct{
+          .contentTabProduct{
+            text-align: center;
+            .imgProduct{
+              margin: 0 auto 30px;
+            }
+            .descriptionProduct{
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@include phabletToTablet{
+  .sucursalesBlock{
+    .phonesSucursales{
+      .phonesRow{
+        .block-acordeon{
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .mapa{
+    .main-block{
+      flex-wrap: wrap;
+      justify-content: center;
+      .left-block{
+        order: 2
+      }
+      .imgIntro{
+        margin: 0 auto 20px;
+        width: 100%;
+        img{
+          display: block;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@include maxTabletPortrait{
+  .headerPrincipal{
+    .search-toggle{
+      order: 3;
+    }
+    .lang{
+      order: 2;
     }
   }
   .sucursalesBlock{
     .phonesSucursales{
       .phonesRow{
-        justify-content: center;
+        .block-acordeon{
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          position: relative;
+          height: 80px;
+          overflow: hidden;
+          transition: all .3s ease-in-out;
+          .phoneItem{
+            transition: all .3s ease-in-out;
+            display: none;
+          }
+          &.active{
+            height: auto;
+            .btn-acordeon{
+              i{
+                transform: rotate(180deg);
+              }
+            }
+            .phoneItem{    
+              display: flex;
+              opacity: 1;
+              visibility: visible;
+              pointer-events: auto;
+              position: relative;
+            }
+          }
+          .btn-acordeon{
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include maxPhablet{
+  .sucursalesBlock{
+    .phonesSucursales{
+      .phonesRow{
+        .block-acordeon{
+          justify-content: center;
+        }
       }
     }
     .introSucursales{
       flex-wrap: wrap;
+      justify-content: center;
       .textIntro{
         text-align: center;
+        h3{
+          font-size: 40px;
+        }
       }
     }
     .mapa{
@@ -1383,6 +1601,7 @@ li{
           img{
             display: block;
             max-width: 100%;
+            margin: 0 auto;
           }
         }
       }
