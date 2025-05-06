@@ -24,9 +24,287 @@
 </head>
 
 <body>
-  <!-- Header -->
+
+  <div class="cintillaTelefonos">
+    <div class="cintillaTelefonos--head">
+      <h4>
+        <small>Cotiza ahora</small>
+        ¡Llámanos!
+      </h4>
+      <button id="toggleCintilla" class="toggle-cintilla-btn">
+        <span class="whenon"> <!-- Mostrar cuando la cintilla está visible -->
+          <i class="bi bi-x-lg"></i>
+        </span>
+        <span class="whenoff" style="display: none;"> <!-- Mostrar cuando está oculta -->
+          <i class="bi bi-plus-lg"></i>
+        </span>
+      </button>
+
+    </div>
+    <div class="cintillaTelefonos--body">
+      <a class="cintillaTelefonos--item" href="tel:44 9843 9999">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Aguascalientes
+          <span class="txtnum">44 9843 9999</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:55 9050 0500">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          CDMX
+          <span class="txtnum">55 9050 0500</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:77 7486 6400">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Cuernavaca
+          <span class="txtnum">77 7486 6400</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:33 2980 0400">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Guadalajara
+          <span class="txtnum">33 2980 0400</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:47 7957 8080">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          León
+          <span class="txtnum">47 7957 8080</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:81 9690 9030">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Monterrey
+          <span class="txtnum">81 9690 9030</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:22 2605 7210">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Puebla
+          <span class="txtnum">22 2605 7210</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:44 2757 0101">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Querétaro
+          <span class="txtnum">44 2757 0101</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:87 1298 8888">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Saltillo
+          <span class="txtnum">87 1298 8888</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:44 4863 9000">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          San Luis Potosí
+          <span class="txtnum">44 4863 9000</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:72 2924 1111">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Toluca
+          <span class="txtnum">72 2924 1111</span>
+        </span>
+      </a>
+
+      <a class="cintillaTelefonos--item" href="tel:87 1298 8888">
+        <i class="bi bi-telephone-forward-fill"></i>
+        <span class="citycopy">
+          <span class="andamiostext">Andamios Amarillos</span>
+          Torreón
+          <span class="txtnum">87 1298 8888</span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <script>
+    const cintilla = document.querySelector('.cintillaTelefonos--body');
+    const toggleBtn = document.getElementById('toggleCintilla');
+    const whenOn = toggleBtn.querySelector('.whenon');
+    const whenOff = toggleBtn.querySelector('.whenoff');
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = cintilla.classList.toggle('is-hidden');
+      toggleBtn.classList.toggle('is-hidden');
+
+      if (isHidden) {
+        whenOn.style.display = 'none';
+        whenOff.style.display = 'inline';
+      } else {
+        whenOn.style.display = 'inline';
+        whenOff.style.display = 'none';
+      }
+    });
+  </script>
+
+
+
+
+
+
   <!-- Header -->
   <header class="headerPrincipal" style="background-color: #f6aa1b;">
+
+    <div class="cintillaParaMobile">
+      <div class="container d-block w-100 " style="height: auto;">
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div class="cintillaTelefonos--body">
+              <a class="cintillaTelefonos--item" href="tel:44 9843 9999">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Aguascalientes
+                  <span class="txtnum">44 9843 9999</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:55 9050 0500">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  CDMX
+                  <span class="txtnum">55 9050 0500</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:77 7486 6400">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Cuernavaca
+                  <span class="txtnum">77 7486 6400</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:33 2980 0400">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Guadalajara
+                  <span class="txtnum">33 2980 0400</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:47 7957 8080">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  León
+                  <span class="txtnum">47 7957 8080</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:81 9690 9030">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Monterrey
+                  <span class="txtnum">81 9690 9030</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:22 2605 7210">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Puebla
+                  <span class="txtnum">22 2605 7210</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:44 2757 0101">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Querétaro
+                  <span class="txtnum">44 2757 0101</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:87 1298 8888">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Saltillo
+                  <span class="txtnum">87 1298 8888</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:44 4863 9000">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  San Luis Potosí
+                  <span class="txtnum">44 4863 9000</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:72 2924 1111">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Toluca
+                  <span class="txtnum">72 2924 1111</span>
+                </span>
+              </a>
+
+              <a class="cintillaTelefonos--item" href="tel:87 1298 8888">
+                <i class="bi bi-telephone-forward-fill"></i>
+                <span class="citycopy">
+                  <span class="andamiostext">Andamios Amarillos</span>
+                  Torreón
+                  <span class="txtnum">87 1298 8888</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cintillaParaMobile--head text-center py-2">
+          <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            <i class="bi bi-telephone-forward-fill"></i>
+            Llámanos
+          </a>
+        </div>
+
+      </div>
+    </div>
+
     <div class="container d-flex justify-content-between align-items-center">
       <a href="#" class="headerPrincipal--logo d-flex align-items-center text-white fw-bold text-decoration-none">
         <img src="./assets/images/logo.png" alt="Andamios Amarillos" width="165" height="110">
@@ -215,10 +493,10 @@
       <div class="container">
 
         <div class="heroHomePage--item d-flex align-items-center">
-          <div class="row ">
+          <div class="row w-100 mx-auto" style="max-width: 1024px">
             <div class="col col-12 col-md-6 col-lg-6 d-flex align-items-center">
-              <div class="heroHomePage--txt">
-                <h2>
+              <div class="heroHomePage--txt" style="position: relative; z-index: 2;">
+                <h2 style="position: relative; z-index: 5;">
                   Renta y compra de
                   <span>Andamios Amarillos</span>
                 </h2>
@@ -227,7 +505,7 @@
             </div>
 
             <div class="col col-12 col-md-6 col-lg-6">
-              <div class="heroHomePage--img">
+              <div class="heroHomePage--img" style="position: relative; z-index: 1;">
                 <img src="./assets/images/char-hero.png" alt="Andamios  Amarillos" class="charimg">
               </div>
             </div>
@@ -563,7 +841,7 @@
                           </a>
                           <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
                             Comprar
-                          </a>                          
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -582,9 +860,14 @@
                             Amplio
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -602,9 +885,14 @@
                             Pasillo
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -622,9 +910,14 @@
                             Escalera
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -642,9 +935,14 @@
                             Antiderrapante
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -661,9 +959,14 @@
                             Cruceta
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -681,9 +984,14 @@
                             8"
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -714,9 +1022,14 @@
                         </p href="https://cotizador.andamiosamarillos.com/" target="_blank"
                           href="https://cotizador.andamiosamarillos.com/" target="_blank" " href="
                           https://cotizador.andamiosamarillos.com/" target="_blank">
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -734,9 +1047,14 @@
                             Telescópico
                           </span>
                         </p href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -753,9 +1071,14 @@
                             Duela o Charola
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -773,9 +1096,14 @@
                             Ortogonal
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -793,9 +1121,14 @@
                             Metálica
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -814,9 +1147,14 @@
                           </span>
                         </p href="https://cotizador.andamiosamarillos.com/" target="_blank" " href="
                           https://cotizador.andamiosamarillos.com/" target="_blank">
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -833,9 +1171,14 @@
                             Bases
                           </span>
                         </p>
-                        <a href="https://cotizador.andamiosamarillos.com/" target="_blank">
-                          Agregar
-                        </a>
+                        <div class="d-flex">
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Rentar
+                          </a>
+                          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="w-50">
+                            Comprar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
