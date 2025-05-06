@@ -50,6 +50,11 @@ ul{
 li{
   list-style: none;
 }
+
+body{
+  padding-top: 145px;
+}
+
 /* footer */
 .footerBlock{
   padding: 50px 0;
@@ -915,6 +920,19 @@ li{
 
 
 .headerPrincipal{
+
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .container{
+    height: 145px;
+    display: flex;
+    align-items: center;
+  }
+
   .lang{
     a{
       color: white;
