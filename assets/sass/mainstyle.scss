@@ -1695,7 +1695,9 @@ body{
 
 .cintillaTelefonos{
   position: fixed;
-  top: 15%;
+  overflow-y: scroll;
+  top: 0;
+  // top: 5%;
   left: 5px;
   z-index: 101;
   width: 180px;
@@ -1710,6 +1712,7 @@ body{
     align-items: center;
     justify-content: space-around;
     margin-bottom: 15px;
+    padding-top: 150px;
     .whenoff{
       display: none;
     }
@@ -1729,6 +1732,12 @@ body{
     transition: all .1s ease-in-out;
     position: relative;
     left: 0;
+    height: auto;
+    @media (min-width: 979px){
+      overflow-y: scroll;
+      height: 90vh;
+      padding-bottom: 200px;
+    }
   }
 
 
@@ -1809,5 +1818,18 @@ body{
   left: 0px;
   i {
     transform: rotate(180deg); // flecha a la izquierda
+  }
+}
+
+
+.target-text{
+  color: white;
+  font-size: 55px;
+  font-weight: normal;
+  font-family: "Alfa Slab One";
+  line-height: 1.15;
+  margin-bottom: 30px;
+  @media (max-width: 767px){
+    font-size: 40px;
   }
 }
