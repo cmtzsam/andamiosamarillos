@@ -61,6 +61,7 @@ body{
   }
 }
 
+
 /* footer */
 .footerBlock{
   padding: 50px 0;
@@ -1335,14 +1336,19 @@ body{
       font-size: 32px;
       font-weight: 600;
       margin: 0 0 30px;
+      &.customtxt{
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
     }
     .phonesRow{
       width: 100%;
       max-width: 1180px;
       .block-acordeon{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 30px;
         align-items: center;
         margin: 0 auto 20px;
         opacity: 0;
@@ -1351,6 +1357,10 @@ body{
         margin: 0 0 15px;
         transition: all .3s ease-in-out;
         position: absolute;
+        @media (max-width: 991px){
+          display: flex;
+          flex-wrap: wrap;
+        }
         .btn-acordeon{
           position: relative;
           display: none;
@@ -1831,5 +1841,114 @@ body{
   margin-bottom: 30px;
   @media (max-width: 767px){
     font-size: 40px;
+  }
+}
+
+
+
+.heroHomePage{
+  position: relative;
+}
+.heroHomePage--extra-box{
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 100%;
+  max-width: 400px;
+  z-index: 99;
+  border: 2px solid $yellow;
+  border-radius: 6px;
+  overflow: hidden;
+  @media (max-width: 979px){
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: unset;
+  }
+  h3{
+    text-align: center;
+    color: black;
+    background-color: $yellow;
+    padding: 10px;
+  }
+  p{
+    padding: 15px;
+    line-height: 1.75;
+    font-size: 16px;
+    color: white;
+  }
+  a{
+    display: table;
+    margin: 15px auto ;
+  }
+}
+
+@media (min-width: 979px){
+  .nosotrosBlock--text{
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 979px) and (max-width: 1350px) {
+
+
+  .cintillaTelefonos{
+    transform: scale(0.8);  
+    left: -5px;
+    &--head{
+      padding-top: 100px;
+    }
+  }
+  header {
+    .container {
+      max-width: 95%;
+    }
+  }
+  .container {
+    max-width: 650px;
+  }
+  .mapa .main-block .imgIntro{
+    display: none;
+  }
+  .sucursalesBlock .phonesSucursales .corpmaps{
+    padding-top: 100px;
+  }
+  .sucursalesBlock .phonesSucursales h4.customtxt{
+    grid-column-start: unset;
+    grid-column-end: unset;
+    position: absolute;
+    top: 20px;
+  }
+  .sucursalesBlock .phonesSucursales .phonesRow .block-acordeon{
+    grid-template-columns: 1fr 1fr;
+  }
+  .nosotrosBlock--text h2{
+    font-size: 3em;
+  }
+  .nosotrosBlock--cta a.btn{
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .nosotrosBlock--cta a.btn i{
+    width: 13px;
+    height: 13px;
+  }
+  .proyectosBlock--item-bg img{
+    min-width: 100%;
+    height: 100%;
+  }
+  .clicProduct{
+    width: 100%;
+    max-width: 250px!important;
+    margin: 0 auto;
+  }
+  .productosBlock .contentProductsBlock .contentProducts{
+    max-width: 400px;
+  }
+  .nosotrosBlock::before{
+    height: 100%;
+    top: 0;
   }
 }
