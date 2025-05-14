@@ -181,10 +181,10 @@ body{
 
 // contactBlock
 .contactBlock{
-
-  padding: 30px 0;
+  overflow: hidden;
+  padding: 30px 0 0;
   @include minDesktopSmall{
-    padding: 60px 0;
+    padding: 60px 0 0;
   }
 
   h2{
@@ -223,6 +223,13 @@ body{
       h4{
         padding: 10px 0 15px;
       }
+      p{
+        small{
+          font-size: 12px;
+          line-height: 1.2;
+          display: block;
+        }
+      }
       a{
         &:hover{
           text-decoration: underline;
@@ -235,13 +242,34 @@ body{
 
 
   &--formrow{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 39;
+      width: 300px;
+      height: 500px;
+      background-image: url(https://andamiosamarillos.com/wp-content/uploads/2023/12/mr-andamios.png);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media (max-width: 767px){
+        opacity: .25;
+      }
+    }
     .custom-form {
       max-width: 700px;
       margin: 50px auto 0;
       padding: 0 15px ;
+      position: relative;
+      z-index: 40;
 
       @include minTabletPortrait{
         margin-top: 100px;
+        margin-bottom: -20px;
+        padding-bottom: 50px;
       }
       
       .form-group {
@@ -779,15 +807,15 @@ body{
 
 
 .heroHomePage{
-  background-color: #fc2213;
+  background-color: #dd2c26;
   @include tabletPortraitToDesktop{
-    padding: 15px 0;
+    // padding: 15px 0;
   }
   @include phabletToTablet{
-    padding: 15px 0;
+    // padding: 15px 0;
   }
   @include maxPhablet{
-    padding: 30px 0 15px;
+    // padding: 30px 0 15px;
   }
   &--item{
     height: 100vh;
@@ -810,35 +838,36 @@ body{
     @include maxPhablet{
       text-align: center;
     }
-    &::after{
-      content: "";
-      position: absolute;
-      right: -30%;
-      width: 240px;
-      height: 240px;
-      background-image: url(../images/laptop.png);
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      top: 0;
-      z-index: 4;
-      @include tabletPortraitToDesktop{
-        width: 200px;
-        height: 200px;
-        right: -30%;
-        top: 25%;
-      }
-      @include phabletToTablet{
-        width: 190px;
-        height: 190px;
-        right: -50%;
-        bottom: 0;
-        top: unset;        
-      }
-      @include maxPhablet{
-        display: none;
-      }
-    }
+    // &::after{
+    //   content: "";
+    //   position: absolute;
+    //   right: -30%;
+    //   width: 240px;
+    //   height: 240px;
+    //   background-image: url(../images/laptop.png);
+    //   background-size: 100%;
+    //   background-repeat: no-repeat;
+    //   background-position: center center;
+    //   top: 0;
+    //   z-index: 4;
+    //   @include tabletPortraitToDesktop{
+    //     width: 200px;
+    //     height: 200px;
+    //     right: -30%;
+    //     top: 25%;
+    //   }
+    //   @include phabletToTablet{
+    //     width: 190px;
+    //     height: 190px;
+    //     right: -50%;
+    //     bottom: 0;
+    //     top: unset;        
+    //   }
+    //   @include maxPhablet{
+    //     display: none;
+    //   }
+    // }
+    h1,
     h2{
       color: white;
       font-size: 50px;
@@ -903,10 +932,10 @@ body{
     }
   }
   &--img{
-    background-image: url('../images/bgred.png');
-    background-position: center center;
-    background-size: 125%;
-    background-repeat: no-repeat;
+    // background-image: url('../images/bgred.png');
+    // background-position: center center;
+    // background-size: 125%;
+    // background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -918,10 +947,11 @@ body{
       display: block;
       max-width: 100%;
       margin: 0 auto;
-      transform: scale(.9);
-      @include maxMobile{
-        max-width: 200px;
-      }
+      mask-image: linear-gradient(transparent, #000 20%, transparent, rgba(0,0,0,0.05) 220%);
+      // transform: scale(.9);
+      // @include maxMobile{
+      //   max-width: 200px;
+      // }
     }
   }
 
@@ -931,7 +961,7 @@ body{
 .headerPrincipal{
 
   position: fixed;
-  z-index: 99;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
@@ -967,8 +997,18 @@ body{
   &--nav{
     a{
       @include minDesktop1280{
-        font-size: 20px;
+        font-size: 14px;
       }
+      @media (min-width: 1440px) {
+        font-size: 16px;
+      }      
+      @include maxDesktopSmall{
+        font-size: 13px;
+      }
+    }
+    .redlink{
+      color: $red!important;
+      text-decoration: underline;
     }
   }
 
@@ -1029,8 +1069,8 @@ body{
   &::before{
     content: "";
     position: absolute;
-    top: 10%;
-    height: 80%;
+    top: 0%;
+    height: 100%;
     width: 100%;
     z-index: 1;
     background-color: rgba(0,0,0,0.5);
@@ -1848,15 +1888,19 @@ body{
 
 .heroHomePage{
   position: relative;
+  &--item{
+    @media (max-width: 1280px){
+      padding: 30px 0;
+    }
+  }
 }
 .heroHomePage--extra-box{
   position: absolute;
   right: 5%;
   bottom: 5%;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   z-index: 99;
-  border: 2px solid $yellow;
   border-radius: 6px;
   overflow: hidden;
   @media (max-width: 979px){
@@ -1865,15 +1909,26 @@ body{
     right: 0;
     width: 100%;
     max-width: unset;
+    text-align: center;
+    padding: 30px 0 10px;
   }
   h3{
-    text-align: center;
-    color: black;
-    background-color: $yellow;
-    padding: 10px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.15;
+    font-family: "Alfa Slab One";    
+    font-weight: 300;
+    text-transform: uppercase;
+    span{
+      display: block;
+      font-family: "Alfa Slab One";    
+      font-size: 45px;
+      margin-top: 5px;
+      color: $yellow;
+    }
   }
   p{
-    padding: 15px;
+    padding: 10px 0;
     line-height: 1.75;
     font-size: 16px;
     color: white;
@@ -1881,8 +1936,36 @@ body{
   a{
     display: table;
     margin: 15px auto ;
+    color: $red;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }
+
+
+@media (min-width: 1350px) and (max-width: 1600px){
+  .cintillaTelefonos{
+    transform: scale(0.8);  
+    left: -15px;
+    &--item{
+      border-radius: 0;
+    }
+    &--head{
+      padding-top: 100px;
+    }
+  }
+  .container{
+    max-width: 80%;
+  }
+}
+
+
+.clientsBlock{
+  h2{
+    color: $yellow;
+  }
+}
+
 
 @media (min-width: 979px){
   .nosotrosBlock--text{
@@ -1890,9 +1973,11 @@ body{
   }
 }
 
-@media (min-width: 979px) and (max-width: 1350px) {
+@media (min-width: 1080px) and (max-width: 1350px) {
 
-
+  .container {
+    max-width: 70%;
+  }
   .cintillaTelefonos{
     transform: scale(0.8);  
     left: -5px;
@@ -1905,9 +1990,7 @@ body{
       max-width: 95%;
     }
   }
-  .container {
-    max-width: 650px;
-  }
+
   .mapa .main-block .imgIntro{
     display: none;
   }
@@ -1952,3 +2035,69 @@ body{
     top: 0;
   }
 }
+
+@media (min-width: 979px) and (max-width: 1080px) {
+
+  .container {
+    max-width: 650px;
+  }
+  .cintillaTelefonos{
+    transform: scale(0.8);  
+    left: -5px;
+    &--head{
+      padding-top: 100px;
+    }
+  }
+  header {
+    .container {
+      max-width: 95%;
+    }
+  }
+
+  .mapa .main-block .imgIntro{
+    display: none;
+  }
+  .sucursalesBlock .phonesSucursales .corpmaps{
+    padding-top: 100px;
+  }
+  .sucursalesBlock .phonesSucursales h4.customtxt{
+    grid-column-start: unset;
+    grid-column-end: unset;
+    position: absolute;
+    top: 20px;
+  }
+  .sucursalesBlock .phonesSucursales .phonesRow .block-acordeon{
+    grid-template-columns: 1fr 1fr;
+  }
+  .nosotrosBlock--text h2{
+    font-size: 3em;
+  }
+  .nosotrosBlock--cta a.btn{
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .nosotrosBlock--cta a.btn i{
+    width: 13px;
+    height: 13px;
+  }
+  .proyectosBlock--item-bg img{
+    min-width: 100%;
+    height: 100%;
+  }
+  .clicProduct{
+    width: 100%;
+    max-width: 250px!important;
+    margin: 0 auto;
+  }
+  .productosBlock .contentProductsBlock .contentProducts{
+    max-width: 400px;
+  }
+  .nosotrosBlock::before{
+    height: 100%;
+    top: 0;
+  }
+}
+
+
+
