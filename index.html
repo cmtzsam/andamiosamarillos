@@ -23,8 +23,8 @@
 
 </head>
 
-<body>
-
+<body >
+  
   <div class="cintillaTelefonos">
     <div class="cintillaTelefonos--head">
       <h4>
@@ -312,13 +312,13 @@
 
       <!-- Navbar Desktop -->
       <nav class="headerPrincipal--nav d-none d-lg-flex gap-4">
-        <a href="#heroHomePage" class="text-white">Inicio</a>
+        <a href="#!" class="text-white" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Inicio</a>
         <a href="#productosBlock" class="text-white">Productos</a>
         <a href="#sucursalesBlock" class="text-white">Sucursales</a>
         <a href="#nosotrosBlock" class="text-white">¿Quiénes somos?</a>
         <!-- <a href="#" class="text-white">Blog</a> -->
         <a href="#" class="text-white">Bolsa de trabajo</a>
-        <a href="#" class="d-block text-white redlink">Facturación en línea</a>
+        <a href="https://cotizador.andamiosamarillos.com/" class="d-block text-white redlink">Facturación en línea</a>
       </nav>
 
       <!-- Search & Toggle Buttons -->
@@ -463,13 +463,14 @@
     <!-- Mobile Nav -->
     <div class="collapse headerPrincipal--mobileNav d-lg-none " id="mobileMenu">
       <div class="container py-3">
-        <a href="#heroHomePage" class="d-block text-white fw-bold mb-2">Inicio</a>
+        <a href="#!" class="d-block text-white fw-bold mb-2" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Inicio</a>
+        
         <a href="#productosBlock" class="d-block text-white fw-bold mb-2">Productos</a>
         <a href="#sucursalesBlock" class="d-block text-white fw-bold mb-2">Sucursales</a>
         <a href="#nosotrosBlock" class="d-block text-white fw-bold mb-2">¿Quiénes somos?</a>
         <!-- <a href="#" class="d-block text-white fw-bold mb-2">Blog</a> -->
         <a href="#" class="d-block text-white fw-bold">Bolsa de trabajo</a>
-        <a href="#" class="d-block text-white fw-bold redlink">Facturación en línea</a>
+        <a href="https://cotizador.andamiosamarillos.com/" class="d-block text-white fw-bold redlink">Facturación en línea</a>
       </div>
     </div>
   </header>
@@ -494,8 +495,10 @@
     </div>
   </div>
 
+  
+
   <main>
-    <div class="heroHomePage" id="heroHomePage">
+    <div class="heroHomePage" >
       <div class="container">
 
         <div class="heroHomePage--item d-flex align-items-center">
@@ -530,14 +533,16 @@
           <p>
             Andamios y cimbras de la mejor calidad. 
           </p>
-          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="btn btn-warning ">¡Cotiza ahora!</a>
+          <a href="https://cotizador.andamiosamarillos.com/" target="_blank" class="btn btn-warning " id="productosBlock" >¡Cotiza ahora!</a>
         </div>
 
       </div>
     </div>
 
+  
+
     <!-- Productos -->
-    <div class="productosBlock" id="productosBlock">
+    <div class="productosBlock" >
       <div class="contentProductsBlock activated1">
         <div class="contentProducts">
           <div class="titleProducts">
@@ -1030,7 +1035,7 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
-          <div class="tabProduct productsCimbra">
+          <div class="tabProduct productsCimbra" >
             <h4>
               Andamios de cimbra
             </h4>
@@ -1218,11 +1223,14 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
+        
       </div>
     </div>
-
+    <div id="sucursalesBlock" class="d-block pb-5 mb-2">&nbsp;</div>
+    
+    
     <!-- Sucursales -->
-    <div class="sucursalesBlock" id="sucursalesBlock">
+    <div class="sucursalesBlock" >
       <div class="container">
         <div class="introSucursales">
           <div class="textIntro">
@@ -2020,7 +2028,9 @@
       </div>
     </div>
 
-    <div class="nosotrosBlock" id="nosotrosBlock">
+    <div id="nosotrosBlock" class="d-block pb-5 mb-5"></div>
+
+    <div class="nosotrosBlock" >
 
       <div class="container">
         <div class="row align-items-center">
@@ -2330,11 +2340,12 @@
           </div> -->
         </div>
       </div>
+      
     </div>
     <!-- casos de exito -->
 
-
-    <div class="clientsBlock pt-5 pb-5" id="clientsBlock">
+    <div id="clientsBlock" class="pb-5 mb-4"></div>
+    <div class="clientsBlock pt-5 pb-5" >
       <div class="container">
         <h2 class="text-center pb-3">Clientes</h2>
         <div class="row align-items-center">
