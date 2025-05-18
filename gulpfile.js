@@ -23,7 +23,7 @@ const paths = {
     dest: 'assets/css/'
   },
   scripts: {
-    src: 'assets/js/**/*.js',
+    src: 'assets/js/all/**/*.js',
     dest: 'assets/js/min/'
   },
   // images: {
